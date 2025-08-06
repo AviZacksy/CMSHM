@@ -13,7 +13,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <HeroSection 
         title="Contact Us"
-        subtitle="Get in touch with us for appointments, inquiries, or emergency care. We're here to help you 24/7."
+        subtitle="Get in touch with us for appointments, inquiries, or emergency care. We&apos;re here to help you 24/7."
         showButtons={false}
       />
 

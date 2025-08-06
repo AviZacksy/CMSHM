@@ -4,8 +4,8 @@ export default function Events() {
   const events = [
     {
       date: "5 May",
-      title: "World Parkinson's Day Seminar",
-      description: "Educational seminar on Parkinson's disease management",
+          title: "World Parkinson&apos;s Day Seminar",
+    description: "Educational seminar on Parkinson&apos;s disease management",
       color: "from-purple-500 to-purple-600",
       hoverColor: "hover:from-purple-600 hover:to-purple-700"
     },

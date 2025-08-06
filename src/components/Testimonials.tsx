@@ -12,7 +12,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Niranjan Salunke",
-      text: "MediCare Hospital is a God gift for us. Although it's expensive, it deserves because from Entry section to ICU department everything is full of all facilities.",
+              text: "MediCare Hospital is a God gift for us. Although it&apos;s expensive, it deserves because from Entry section to ICU department everything is full of all facilities.",
       rating: 5,
       color: "from-blue-500 to-blue-600",
       hoverColor: "hover:from-blue-600 hover:to-blue-700"
@@ -26,7 +26,7 @@ export default function Testimonials() {
     },
     {
       name: "Dr. Amit Patel",
-      text: "As a healthcare professional, I can confidently say that the medical standards and patient care here are exceptional. The team's dedication is remarkable.",
+      text: "As a healthcare professional, I can confidently say that the medical standards and patient care here are exceptional. The team&apos;s dedication is remarkable.",
       rating: 5,
       color: "from-purple-500 to-purple-600",
       hoverColor: "hover:from-purple-600 hover:to-purple-700"
