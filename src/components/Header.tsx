@@ -4,10 +4,11 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 interface HeaderProps {
-  currentPage?: 'home' | 'about' | 'doctors' | 'specialties' | 'patient-services' | 'international' | 'healthcare-professionals' | 'academics' | 'events' | 'blog' | 'contact';
+  currentPage?: 'home' | 'about' | 'doctors' | 'specialties' | 'patient-services' | 'international' | 'healthcare-professionals' | 'academics' | 'events' | 'blog' | 'contact' | 'find-doctor' | 'get-care' | 'locations' | 'records-billing' | 'signin' | 'patients' | 'providers' | 'university';
 }
 
 export default function Header({ currentPage = 'home' }: HeaderProps) {
+  // currentPage prop is available for future use in highlighting active navigation
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const toggleMobileMenu = () => { setIsMobileMenuOpen(!isMobileMenuOpen); };

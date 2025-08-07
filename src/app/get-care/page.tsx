@@ -82,7 +82,7 @@ export default function GetCarePage() {
               Get Care
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Access comprehensive healthcare services tailored to your needs. From routine check-ups to specialized treatments, we're here for you.
+              Access comprehensive healthcare services tailored to your needs. From routine check-ups to specialized treatments, we&apos;re here for you.
             </p>
           </div>
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 export default function Testimonials() {
   const [isClient, setIsClient] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
