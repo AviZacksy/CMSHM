@@ -1,8 +1,6 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import QuickActions from '@/components/QuickActions';
-import Specialties from '@/components/Specialties';
-import DoctorDirectory from '@/components/DoctorDirectory';
 import Events from '@/components/Events';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
@@ -22,11 +20,9 @@ export default function Home() {
       {/* Quick Actions */}
       <QuickActions />
 
-      {/* Specialties Section */}
-      <Specialties />
 
-      {/* Doctor Directory */}
-      <DoctorDirectory />
+
+
 
       {/* Events & Updates */}
       <Events />

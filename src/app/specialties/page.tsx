@@ -1,283 +1,231 @@
+'use client';
+
 import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 
 export default function SpecialtiesPage() {
   const specialties = [
     {
-      name: "Cardiovascular Sciences",
+      title: "Cardiology",
+      subtitle: "Heart Care",
+      description: "Comprehensive heart care with advanced diagnostic and treatment facilities for all cardiac conditions.",
       icon: "❤️",
-      description: "Comprehensive heart care with advanced cardiac procedures",
-      services: [
-        "Interventional Cardiology",
-        "Cardiac Surgery",
-        "Electrophysiology",
-        "Heart Failure Management",
-        "Preventive Cardiology"
-      ],
-      equipment: "3D Echocardiography, Cardiac CT, Cardiac MRI",
-      doctors: "8 Specialist Doctors",
-      procedures: "500+ procedures annually"
+      color: "from-red-500 to-pink-500",
+      bgColor: "bg-red-50",
+      borderColor: "border-red-200",
+      features: ["Echocardiography", "Angioplasty", "Heart Surgery", "Cardiac Rehabilitation"],
+      doctors: "3 Specialists",
+      experience: "25+ Years"
     },
     {
-      name: "Oncology & Cancer Care",
-      icon: "🔬",
-      description: "Multidisciplinary approach to cancer treatment and care",
-      services: [
-        "Medical Oncology",
-        "Radiation Oncology",
-        "Surgical Oncology",
-        "Hematology",
-        "Palliative Care"
-      ],
-      equipment: "Linear Accelerator, PET-CT, CyberKnife",
-      doctors: "12 Specialist Doctors",
-      procedures: "1000+ treatments annually"
-    },
-    {
-      name: "Neurological Sciences",
+      title: "Neurology",
+      subtitle: "Brain & Nerve Care",
+      description: "Expert care for neurological disorders, stroke treatment, and comprehensive brain health management.",
       icon: "🧠",
-      description: "Advanced treatment for brain and nervous system disorders",
-      services: [
-        "Neurology",
-        "Neurosurgery",
-        "Neurointervention",
-        "Epilepsy Management",
-        "Movement Disorders"
-      ],
-      equipment: "3T MRI, Neuro Navigation, EEG Lab",
-      doctors: "10 Specialist Doctors",
-      procedures: "300+ surgeries annually"
+      color: "from-blue-500 to-indigo-500",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
+      features: ["Stroke Care", "Epilepsy Treatment", "Brain Imaging", "Neurological Surgery"],
+      doctors: "2 Specialists",
+      experience: "20+ Years"
     },
     {
-      name: "Orthopedics & Joint Care",
+      title: "Orthopedics",
+      subtitle: "Bone & Joint Care",
+      description: "Advanced bone and joint care with surgical expertise for fractures, replacements, and sports injuries.",
       icon: "🦴",
-      description: "Comprehensive bone and joint care with advanced surgical techniques",
-      services: [
-        "Joint Replacement",
-        "Spine Surgery",
-        "Sports Medicine",
-        "Trauma Care",
-        "Pediatric Orthopedics"
-      ],
-      equipment: "Robotic Surgery System, 3D Imaging, Arthroscopy",
-      doctors: "15 Specialist Doctors",
-      procedures: "800+ surgeries annually"
+      color: "from-green-500 to-emerald-500",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
+      features: ["Joint Replacement", "Sports Medicine", "Fracture Care", "Rehabilitation"],
+      doctors: "4 Specialists",
+      experience: "30+ Years"
     },
     {
-      name: "Pediatric Care",
+      title: "Oncology",
+      subtitle: "Cancer Care",
+      description: "Comprehensive cancer care with cutting-edge treatments, chemotherapy, and radiation therapy.",
+      icon: "🩺",
+      color: "from-purple-500 to-violet-500",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200",
+      features: ["Chemotherapy", "Radiation Therapy", "Surgical Oncology", "Palliative Care"],
+      doctors: "2 Specialists",
+      experience: "18+ Years"
+    },
+    {
+      title: "Pediatrics",
+      subtitle: "Child Care",
+      description: "Specialized care for children from birth to adolescence with child-friendly medical approaches.",
       icon: "👶",
-      description: "Specialized healthcare for children from birth to adolescence",
-      services: [
-        "General Pediatrics",
-        "Neonatology",
-        "Pediatric Surgery",
-        "Child Development",
-        "Pediatric Emergency"
-      ],
-      equipment: "NICU, PICU, Pediatric Imaging",
-      doctors: "20 Specialist Doctors",
-      procedures: "1200+ consultations monthly"
+      color: "from-pink-500 to-rose-500",
+      bgColor: "bg-pink-50",
+      borderColor: "border-pink-200",
+      features: ["Child Development", "Vaccination", "Growth Monitoring", "Child Psychology"],
+      doctors: "3 Specialists",
+      experience: "15+ Years"
     },
     {
-      name: "Dermatology & Aesthetics",
-      icon: "✨",
-      description: "Comprehensive skin care and cosmetic procedures",
-      services: [
-        "Medical Dermatology",
-        "Cosmetic Dermatology",
-        "Dermatosurgery",
-        "Laser Therapy",
-        "Skin Cancer Treatment"
-      ],
-      equipment: "CO2 Laser, IPL, Dermoscopy",
-      doctors: "6 Specialist Doctors",
-      procedures: "2000+ treatments annually"
-    },
-    {
-      name: "Psychiatry & Mental Health",
-      icon: "🧘",
-      description: "Comprehensive mental health care and psychological support",
-      services: [
-        "Adult Psychiatry",
-        "Child Psychiatry",
-        "Addiction Medicine",
-        "Psychotherapy",
-        "Rehabilitation"
-      ],
-      equipment: "TMS, EEG, Psychological Testing",
-      doctors: "8 Specialist Doctors",
-      procedures: "1500+ consultations monthly"
-    },
-    {
-      name: "Emergency Medicine",
-      icon: "🚨",
-      description: "24/7 emergency care with rapid response and critical care",
-      services: [
-        "Trauma Care",
-        "Critical Care",
-        "Emergency Surgery",
-        "Ambulance Services",
-        "Disaster Management"
-      ],
-      equipment: "ECMO, Ventilators, CT Scan",
-      doctors: "25 Specialist Doctors",
-      procedures: "24/7 Emergency Services"
+      title: "Dermatology",
+      subtitle: "Skin Care",
+      description: "Expert skin care and treatment for all skin conditions, cosmetic procedures, and dermatological surgery.",
+      icon: "🩹",
+      color: "from-orange-500 to-amber-500",
+      bgColor: "bg-orange-50",
+      borderColor: "border-orange-200",
+      features: ["Skin Surgery", "Cosmetic Procedures", "Allergy Testing", "Laser Treatment"],
+      doctors: "2 Specialists",
+      experience: "12+ Years"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
       <Header currentPage="specialties" />
       
-      <HeroSection 
-        title="Clinical Departments"
-        subtitle="Comprehensive medical specialties providing world-class healthcare across all major disciplines."
-        showButtons={false}
-      />
-
-      {/* Overview Section */}
-      <section className="py-12 bg-white">
+      <main className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Clinical Excellence</h2>
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+              Medical Specialties
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Our Specialties
+            </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer comprehensive medical care across 8 major clinical departments, each staffed with expert specialists 
-              and equipped with state-of-the-art technology to provide the highest quality healthcare services.
+              Comprehensive medical care across all major specialties with world-class expertise and advanced treatments
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            {[
-              { number: "8", label: "Clinical Departments" },
-              { number: "100+", label: "Specialist Doctors" },
-              { number: "5000+", label: "Annual Procedures" },
-              { number: "24/7", label: "Emergency Care" }
-            ].map((stat, index) => (
-              <div key={index} className="bg-blue-50 rounded-lg p-6">
-                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-sm sm:text-base text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Specialties Grid */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Clinical Departments</h2>
-            <p className="text-lg sm:text-xl text-gray-600">Expert care across all major medical specialties</p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Specialties Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {specialties.map((specialty, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="p-6 sm:p-8">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className="text-4xl sm:text-5xl">{specialty.icon}</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{specialty.name}</h3>
-                      <p className="text-gray-600">{specialty.description}</p>
+              <div 
+                key={index} 
+                className={`group relative ${specialty.bgColor} border-2 ${specialty.borderColor} rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden`}
+              >
+                {/* Background Pattern */}
+                <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${specialty.color} opacity-10 rounded-full -translate-y-20 translate-x-20 group-hover:scale-150 transition-transform duration-500`}></div>
+                
+                {/* Header Section */}
+                <div className="relative z-10 flex items-start justify-between mb-6">
+                  {/* Specialty Icon */}
+                  <div className={`w-20 h-20 bg-gradient-to-r ${specialty.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
+                    <div className="text-3xl">
+                      {specialty.icon}
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Services Offered</h4>
-                      <ul className="space-y-1">
-                        {specialty.services.map((service, serviceIndex) => (
-                          <li key={serviceIndex} className="text-sm text-gray-600 flex items-center">
-                            <span className="text-green-500 mr-2">✓</span>
-                            {service}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Key Information</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Equipment:</span>
-                          <span className="font-medium">{specialty.equipment}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Specialists:</span>
-                          <span className="font-medium">{specialty.doctors}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Procedures:</span>
-                          <span className="font-medium">{specialty.procedures}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-6 flex space-x-3">
-                    <button className="btn-primary flex-1 text-sm">Book Consultation</button>
-                    <button className="flex-1 py-2 px-4 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-sm">
-                      Learn More
-                    </button>
+                  {/* Stats Badge */}
+                  <div className="text-right">
+                    <div className="text-sm font-semibold text-gray-600">{specialty.doctors}</div>
+                    <div className="text-xs text-gray-500">{specialty.experience}</div>
                   </div>
                 </div>
+                
+                {/* Specialty Info */}
+                <div className="relative z-10 mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                    {specialty.title}
+                  </h3>
+                  <div className={`text-sm font-semibold bg-gradient-to-r ${specialty.color} bg-clip-text text-transparent mb-3`}>
+                    {specialty.subtitle}
+                  </div>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {specialty.description}
+                  </p>
+                  
+                  {/* Features List */}
+                  <div className="space-y-2 mb-6">
+                    {specialty.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-3">
+                        <div className={`w-2 h-2 bg-gradient-to-r ${specialty.color} rounded-full`}></div>
+                        <span className="text-sm font-medium text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Action Buttons */}
+                <div className="relative z-10 space-y-3">
+                  <button 
+                    className={`group/btn relative w-full py-3 px-6 bg-gradient-to-r ${specialty.color} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 overflow-hidden`}
+                    type="button"
+                    suppressHydrationWarning
+                  >
+                    <span className="relative z-10">Learn More</span>
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
+                  </button>
+                  <button 
+                    className="group/btn relative w-full py-3 px-6 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
+                    type="button"
+                    suppressHydrationWarning
+                  >
+                    Find Doctors
+                  </button>
+                </div>
+                
+                {/* Hover Effect */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${specialty.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Technology & Innovation */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Advanced Technology & Innovation</h2>
-            <p className="text-lg sm:text-xl text-gray-600">State-of-the-art medical equipment and cutting-edge procedures</p>
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="text-3xl font-bold text-blue-600 mb-2">6</div>
+              <div className="text-sm text-gray-600">Medical Specialties</div>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="text-3xl font-bold text-green-600 mb-2">16</div>
+              <div className="text-sm text-gray-600">Expert Specialists</div>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="text-3xl font-bold text-purple-600 mb-2">120+</div>
+              <div className="text-sm text-gray-600">Years Experience</div>
+            </div>
+            <div className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
+              <div className="text-sm text-gray-600">Emergency Care</div>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              {
-                icon: "🤖",
-                title: "Robotic Surgery",
-                description: "Advanced robotic-assisted surgical procedures for precision and faster recovery"
-              },
-              {
-                icon: "🔬",
-                title: "3D Imaging",
-                description: "High-resolution 3D imaging for accurate diagnosis and treatment planning"
-              },
-              {
-                icon: "💊",
-                title: "Precision Medicine",
-                description: "Personalized treatment approaches based on genetic and molecular profiling"
-              },
-              {
-                icon: "📱",
-                title: "Digital Health",
-                description: "Integrated digital health solutions for better patient care and monitoring"
-              },
-              {
-                icon: "🧬",
-                title: "Genetic Testing",
-                description: "Advanced genetic testing for early detection and personalized treatment"
-              },
-              {
-                icon: "⚡",
-                title: "AI Diagnostics",
-                description: "Artificial intelligence-powered diagnostic tools for enhanced accuracy"
-              }
-            ].map((tech, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">
-                <div className="text-4xl sm:text-5xl mb-4">{tech.icon}</div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3">{tech.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600">{tech.description}</p>
+
+          {/* Bottom CTA */}
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+            {/* Background Elements */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-32 -translate-y-32 opacity-10"></div>
+            <div className="absolute bottom-0 right-0 w-48 h-48 bg-white rounded-full translate-x-24 translate-y-24 opacity-10"></div>
+            
+            <div className="relative z-10">
+              <h3 className="text-3xl font-bold mb-4">
+                Need a Specific Specialist?
+              </h3>
+              <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg">
+                Our team of specialists is here to provide expert care in every medical field. Find the right specialist for your health needs.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button 
+                  className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300"
+                  type="button"
+                  suppressHydrationWarning
+                >
+                  Find Specialist
+                </button>
+                <button 
+                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                  type="button"
+                  suppressHydrationWarning
+                >
+                  View All Specialties
+                </button>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

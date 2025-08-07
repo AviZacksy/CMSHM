@@ -71,6 +71,7 @@ export default function Events() {
                     <button 
                       className={`inline-flex items-center bg-gradient-to-r ${event.color} ${event.hoverColor} text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg`}
                       type="button"
+                      suppressHydrationWarning
                     >
                       Read More
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,6 +123,7 @@ export default function Events() {
                     <button 
                       className={`inline-flex items-center bg-gradient-to-r ${event.color} ${event.hoverColor} text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg`}
                       type="button"
+                      suppressHydrationWarning
                     >
                       Read More
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,10 +168,12 @@ export default function Events() {
                 type="email" 
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                suppressHydrationWarning
               />
               <button 
                 className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 type="button"
+                suppressHydrationWarning
               >
                 Subscribe
               </button>
